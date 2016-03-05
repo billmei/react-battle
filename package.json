@@ -6,8 +6,8 @@
   "scripts": {
     "precompile": "webpack -p"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Bill Mei",
+  "license": "MIT",
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
