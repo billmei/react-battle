@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "precompile": "webpack -p"
+    "precompile": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "author": "Bill Mei",
   "license": "MIT",
