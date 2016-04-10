@@ -11,7 +11,7 @@ function getUserInfo(username) {
 };
 
 function getRepos(username) {
-  return axios.get(GITHUB_URL + username + '/repos' + param + '&per_page=100')
+  return axios.get(GITHUB_URL + username + '/repos' + queryString + '&per_page=100')
 };
 
 function getTotalStars(repos) {
@@ -56,7 +56,7 @@ var helpers = {
 
     return axios.all([playerOneData, playerTwoData])
       .then(calculateScores)
-      .catch(function(err) {console.warn("Error in getPlayersInfo: ", err)})
+      .catch(function(err) {console.warn("Error in battle: ", err)})
   },
 };
 
