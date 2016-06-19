@@ -8,19 +8,13 @@ var ConfirmBattleContainer = React.createClass({
   },
 
   getInitialState: function() {
-    console.log('ConfirmBattleContainer', 'getInitialState');
     return {
       isLoading: true,
       playersInfo: [],
     };
   },
 
-  componentWillMount: function() {
-    console.log('ConfirmBattleContainer', 'componentWillMount');
-  },
-
   componentDidMount: function() {
-    console.log('ConfirmBattleContainer', 'componentDidMount');
     // onShow: Make ajax requests
     var query = this.props.location.query;
     githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
@@ -32,17 +26,9 @@ var ConfirmBattleContainer = React.createClass({
       }.bind(this));
   },
 
-  componentWillReceiveProps: function() {
-    console.log('ConfirmBattleContainer', 'componentWillReceiveProps');
-  },
-
-  componentWillUnmount: function() {
-    console.log('ConfirmBattleContainer', 'componentWillUnmount');
-  },
-
   handleInitiateBattle: function() {
     this.context.router.push({
-      pathame: '/results',
+      pathname: '/results',
       state: {
         playersInfo: this.state.playersInfo,
       },
@@ -50,7 +36,6 @@ var ConfirmBattleContainer = React.createClass({
   },
 
   render() {
-    console.log('ConfirmBattleContainer', 'rendering!')
     return (
       <div className="container">
         <ConfirmBattle

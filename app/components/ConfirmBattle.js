@@ -5,6 +5,7 @@ var ReactRouter = require('react-router')
 var Link = ReactRouter.Link;
 var UserDetailsWrapper = require('./UserDetailsWrapper')
 var UserDetails = require('./UserDetails');
+var MainContainer = require('./MainContainer');
 
 function ConfirmBattle (props) {
   return props.isLoading === true ? (
@@ -15,7 +16,7 @@ function ConfirmBattle (props) {
       </div>
     </div>
   ) : (
-    <div className="jumbotron text-center" style={styles.transparentBg}>
+    <MainContainer>
       <div className="row">
         <div className='col-sm-10 col-sm-offset-1'>
           <h1>Confirm Players</h1>
@@ -45,7 +46,7 @@ function ConfirmBattle (props) {
           </div>
         </div>
       </div>
-    </div>
+    </MainContainer>
   );
 }
 
