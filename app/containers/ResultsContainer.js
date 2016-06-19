@@ -26,11 +26,13 @@ var ResultsContainer = React.createClass({
 
   render() {
     return (
-      <Results
-        isLoading={this.state.isLoading}
-        playersInfo={this.props.location.state.playersInfo}
-        scores={this.state.scores}
-      />
+      <div className="container">
+        <Results
+          isLoading={this.state.isLoading}
+          playersInfo={this.props.location.state.playersInfo}
+          scores={this.state.scores}
+        />
+      </div>
     );
   },
 });

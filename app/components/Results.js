@@ -21,7 +21,7 @@ function StartOver() {
 
 function Results(props) {
   if (props.isLoading === true) {
-    return <LoadingSpinner />;
+    return <MainContainer><LoadingSpinner /></MainContainer>;
   }
 
   if (props.scores[0] === props.scores[1]) {
