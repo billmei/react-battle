@@ -5,6 +5,7 @@ var UserDetailsWrapper = require('./UserDetailsWrapper')
 var UserDetails = require('./UserDetails');
 var Link = require('react-router').Link;
 var MainContainer = require('./MainContainer');
+var LoadingSpinner = require('./LoadingSpinner');
 
 function StartOver() {
   return (
@@ -20,9 +21,7 @@ function StartOver() {
 
 function Results(props) {
   if (props.isLoading === true) {
-    return (
-      <p>LOADING</p>
-    );
+    return <LoadingSpinner />;
   }
 
   if (props.scores[0] === props.scores[1]) {

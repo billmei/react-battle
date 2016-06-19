@@ -6,15 +6,11 @@ var Link = ReactRouter.Link;
 var UserDetailsWrapper = require('./UserDetailsWrapper')
 var UserDetails = require('./UserDetails');
 var MainContainer = require('./MainContainer');
+var LoadingSpinner = require('./LoadingSpinner');
 
 function ConfirmBattle (props) {
   return props.isLoading === true ? (
-    <div className="row">
-      <div className="col-xs-12 text-center">
-        <p><strong>Loading!</strong></p>
-        <p><span className="glyphicon glyphicon-spin glyphicon-refresh"></span></p>
-      </div>
-    </div>
+    <LoadingSpinner />
   ) : (
     <MainContainer>
       <div className="row">
